@@ -1,25 +1,79 @@
 #lista-page{
     height: 100vh;
     display: grid;
-    /*grid-template-rows: 1fr 10fr 1fr;*/
-    grid-template-areas: 'principal','rodape','cabecalho'
+    grid-template-rows: 1fr 3fr 6fr 0.7fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    'cabecalho cabecalho'
+    'formulario formulario'
+    'lista lista'
+    'rodape rodape'
     ;
     
 }
 
 #cabecalho{
     background-color: green;
-    grid-area: "cabecalho";
+    grid-area: cabecalho;
     
 }
 #principal{
-    background-color: yellow;
-    grid-area: "principal";
+    grid-area: lista;
+    overflow: auto;
+}
+#items-compras{
+    text-align:center;
+    width: 100%;
+}
+#items-compras th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #4CAF50;
+    color: white;
+}
+#items-compras tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+.centraliza-btn-jc{
+    display: flex;
+    justify-content: space-around;
+}
+
+#aside{
+    grid-area: formulario;
+    padding: 9.99px;
 }
 
 #rodape{
     background-color: blue;
-    grid-area: "rodape";
+    grid-area: rodape;
 }
 
+@media only screen and (min-width: 600px) {
+    #lista-page{
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr 10fr 0.9fr;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+        'cabecalho cabecalho'
+        'lista formulario'
+        'rodape rodape'
+        ;      
+    }
 
+    .centraliza-btn-jc{
+        display: flex;
+        justify-content: center;
+    }
+
+    #aside{
+        display: flex;
+    }
+    #flex{
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
