@@ -3,7 +3,7 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 
 const CampoFormulario = props => {
-    const { nomeCampo, textoAjuda, id, name, value, onChange } = props;
+    const { nomeCampo, textoAjuda, id, name, value, onChange, erro, type="text" } = props;
     return (
         <div>
             <TextField
@@ -16,6 +16,8 @@ const CampoFormulario = props => {
                 fullWidth
                 helperText={ textoAjuda }
                 variant="filled"
+                error = { erro }
+                type = { type }
             />
         </div>
     );

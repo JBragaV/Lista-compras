@@ -1,0 +1,45 @@
+#home{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 10fr 0.9fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'cabecalho'
+    'formulario'
+    'rodape'
+    ; 
+}
+
+.titulo{
+    text-align: center;
+}
+
+#cabecalho{
+    background-color: green;
+    grid-area: cabecalho;
+}
+
+#login{
+    padding: 18px;
+    grid-area: formulario;
+    overflow: auto;
+}
+
+#rodape{
+    background-color: blue;
+    grid-area: rodape;
+}
+
+@media only screen and (min-width: 600px) {
+    #home{
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr 10fr 0.9fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        'cabecalho cabecalho cabecalho'
+        '. formulario .'
+        'rodape rodape rodape'
+        ;      
+    }
+}

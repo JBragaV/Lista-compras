@@ -7,7 +7,7 @@ const Botao = props =>{
     const { cor, texto, acao } = props;
 
     return(
-        <Button variant="contained" fullWidth color={cor} onClick={acao}>{texto}</Button>
+        <Button disabled={false} variant="contained" fullWidth color={cor} onClick={acao}>{texto}</Button>
     );
 }
 

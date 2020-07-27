@@ -15,7 +15,6 @@
 #cabecalho{
     background-color: green;
     grid-area: cabecalho;
-    
 }
 #principal{
     grid-area: lista;
