@@ -11,7 +11,7 @@ import './styles.css';
 
 const Home = () =>{
 
-    //Criar uma função que, toda a vez que entrar na página home, execute uma função parar validar o token
+    //Criar uma função que, toda a vez que entrar na página home, execute uma função parar validar o token //useEffect// document.title, para atualizar, mudar, o titulo da página
 
     const [user, setUser] = useState({
         nome: "",
